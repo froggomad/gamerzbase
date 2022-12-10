@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0F93C129430BA500ACFCB1 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F93C029430BA500ACFCB1 /* GameDetailView.swift */; };
 		AA831A06293D992B001F2BD8 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA831A05293D992B001F2BD8 /* GameListView.swift */; };
 		AA831A08293D9AFA001F2BD8 /* GameRatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA831A07293D9AFA001F2BD8 /* GameRatingsView.swift */; };
 		AAE64800293D1C4200D64A90 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE647FF293D1C4200D64A90 /* NetworkManager.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA0F93C029430BA500ACFCB1 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		AA831A05293D992B001F2BD8 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		AA831A07293D9AFA001F2BD8 /* GameRatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRatingsView.swift; sourceTree = "<group>"; };
 		AAE647FF293D1C4200D64A90 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				AAE64808293D492D00D64A90 /* GameModel.swift */,
 				AA831A05293D992B001F2BD8 /* GameListView.swift */,
 				AA831A07293D9AFA001F2BD8 /* GameRatingsView.swift */,
+				AA0F93C029430BA500ACFCB1 /* GameDetailView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				AAEA1ADC293C9CF20054AC86 /* gamerzbaseApp.swift in Sources */,
 				AAE64802293D1CAC00D64A90 /* AppVersionComparison.swift in Sources */,
 				AA831A08293D9AFA001F2BD8 /* GameRatingsView.swift in Sources */,
+				AA0F93C129430BA500ACFCB1 /* GameDetailView.swift in Sources */,
 				AAE64804293D1CE300D64A90 /* Storage.swift in Sources */,
 				AAE64809293D492D00D64A90 /* GameModel.swift in Sources */,
 			);

@@ -52,6 +52,11 @@ struct Game: Codable, CustomStringConvertible, Identifiable {
     }
 }
 
+struct GameDetails: Codable, Identifiable {
+    let id: Int
+    let description: String
+}
+
 struct GameRating: Codable, CustomStringConvertible, Identifiable {
     let id: Int
     let title: String

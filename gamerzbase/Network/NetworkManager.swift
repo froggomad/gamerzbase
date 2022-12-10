@@ -16,7 +16,7 @@ extension Endpoint {
     }
 
     static func gameDetailsEndpoint(for gameId: Int) -> Endpoint {
-        constructRawgEndpoint(with: String(gameId), using: gamesEndpoint)
+        constructRawgEndpoint(with: String(gameId), using: "games")
     }
 
     static var checkUpdate: Endpoint {
@@ -28,9 +28,9 @@ extension Endpoint {
         return Endpoint("\(rawgBaseURL)/\(endpointString)".appendingRawgAPIKey())
     }
     
-    private static func constructRawgEndpoint(with userInputString: String, using endpoint: Endpoint) -> Endpoint {
+    private static func constructRawgEndpoint(with userInputString: String, using endpointString: String) -> Endpoint {
         let escapedText = userInputString.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? userInputString
-        return Endpoint("\(rawgBaseURL)/\(endpoint.rawValue)/\(escapedText)".appendingRawgAPIKey())
+        return Endpoint("\(rawgBaseURL)/\(endpointString)/\(escapedText)".appendingRawgAPIKey())
     }
 
 
@@ -65,6 +65,13 @@ class NetworkManager {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let results = try decoder.decode(GameContainer.self, from: data)
         return results.results
+    }
+
+    static func getGameDetails(_ id: Int) async throws -> GameDetails {
+        let data = try await get(endpoint: .gameDetailsEndpoint(for: id))
+        let decoder = JSONDecoder()
+        let decoded = try decoder.decode(GameDetails.self, from: data)
+        return decoded
     }
 
     static func needsUpdate() async throws -> AppVersionComparison {
